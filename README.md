@@ -5,7 +5,8 @@
 ```
 df_regioes = df["NO_REGIAO_IES"].value_counts()
 expandir = (0.06, 0, 0, 0, 0)
-df_regioes.plot(kind="pie", shadow=True, title="IES por Região", explode=expandir, autopct="%1.1f%%", startangle=90)
+df_regioes.plot(kind="pie", shadow=True, title="IES por Região",
+                explode=expandir, autopct="%1.1f%%", startangle=90)
 plt.ylabel(ylabel=None)
 ```
 <div align="center">
@@ -49,8 +50,8 @@ def df_categoria_labels(df):
 df_categoria = df["TP_CATEGORIA_ADMINISTRATIVA"].value_counts()
 labels = df_categoria_labels(df_categoria)
 expandir = (0.06, 0, 0, 0, 0, 0)
-df_categoria.plot(kind="pie", shadow=True, title="IES por Categoria", explode=expandir,
-                  labels=labels, autopct="%1.1f%%", pctdistance=0.85, startangle=180, textprops={'fontsize': 9})
+df_categoria.plot(kind="pie", shadow=True, title="IES por Categoria", explode=expandir, labels=labels,
+                  autopct="%1.1f%%", pctdistance=0.85, startangle=180, textprops={'fontsize': 9})
 plt.ylabel(ylabel=None)
 ```
 <div align="center">
@@ -77,8 +78,9 @@ df_org_acad = df["TP_ORGANIZACAO_ACADEMICA"]
 df_org_acad = df_org_acad[df_org_acad != 5].value_counts()
 labels = org_acad_labels(df_org_acad)
 expandir = (0.08, 0, 0, 0)
-df_org_acad.plot(kind="pie", shadow=True, title="IES por Organização", explode=expandir,
-                 wedgeprops=dict(width=0.5), labels=labels, autopct="%1.0f%%", pctdistance=0.85, startangle=180)
+df_org_acad.plot(kind="pie", shadow=True, title="IES por Organização",
+                 explode=expandir, wedgeprops=dict(width=0.5), labels=labels,
+                 autopct="%1.0f%%", pctdistance=0.85, startangle=180)
 plt.ylabel(ylabel=None)
 ```
 <div align="center">
@@ -178,7 +180,8 @@ docentes_indigena = df["QT_DOC_EX_INDIGENA"].sum()
 valores = [docentes_branca, docentes_parda, docentes_preta, docentes_amarela, docentes_indigena]
 fig, ax = plt.subplots()
 expandir = (0.08, 0, 0, 0, 0)
-ax.pie(valores, shadow=True, explode=expandir, labels=labels, autopct='%1.1f%%', pctdistance=0.75, startangle=0, textprops={'fontsize': 8})
+ax.pie(valores, shadow=True, explode=expandir, labels=labels, autopct='%1.1f%%',
+       pctdistance=0.75, startangle=0, textprops={'fontsize': 8})
 plt.title("Docentes por Cor/Raça")
 ```
 <div align="center">
