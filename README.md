@@ -1,4 +1,4 @@
-<h1 align="center">Brazilian Higher Education Analysis (2021)</h1>
+<h1 align="center">Brazilian Higher Education Visualization (2021)</h1>
 <p>Based on publicly available data: https://www.gov.br/inep/pt-br/acesso-a-informacao/dados-abertos/microdados/censo-da-educacao-superior</p>
 
 <h2 align="center">Initialization</h2>
